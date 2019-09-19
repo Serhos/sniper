@@ -89,8 +89,8 @@ body{
     font-family: "maneurope-light";
     color: rgb(172, 177, 182);
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 8px;
+    bottom: 11px;
     z-index: 2;
 }
 
