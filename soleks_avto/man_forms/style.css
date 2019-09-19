@@ -101,7 +101,7 @@ body{
     display: block;
     position: absolute;
     right: 0px;
-    top:20px
+    top:20px;
     z-index: 2;
     font-size: 13px;
     font-family: "maneurope-light";
@@ -122,8 +122,9 @@ body{
 
 }
 
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
+.range::-webkit-slider-thumb,
+.range::-moz-range-thumb,
+.range::-ms-thumb {
     width: 13px;
     height:13px;
     background:#303c49;
