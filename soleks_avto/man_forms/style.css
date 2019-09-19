@@ -101,9 +101,15 @@ body{
     display: block;
     position: absolute;
     right: 0px;
+    top:20px
     z-index: 2;
+    font-size: 13px;
+    font-family: "maneurope-light";
+    color: rgb(172, 177, 182);
+    line-height: 2.846;
 }
 .range_label {
+    font-family: "maneurope-light";
     font-size: 15px;
     color: rgb(48, 60, 73);
     font-weight: bold;
@@ -112,6 +118,8 @@ body{
     left: 0px;
     top: 0px;
     z-index: 3;
+
+
 }
 
 .range::-webkit-slider-thumb {
@@ -124,6 +132,9 @@ body{
     -webkit-transition:.1s;
     -o-transition:.1s;
     transition:.1s;
+}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
 }
 
 .range-width {
