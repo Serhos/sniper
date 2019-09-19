@@ -9,92 +9,102 @@
     <title>Формы</title>
 </head>
 <body>
-        <h1 class="form-header">Запрос на лизинг</h1>
-<section class="form-wrapper">
-    <div class="flex-wrapper">
+<h1 class="form-header">Запрос на лизинг</h1>
+<section class="form-wrapper form-leasing">
+    <div class="flex-wrapper with_rite_placeholder">
         <div>
-        <label class="form-label" for="text1">Стоимость автомобиля</label>
-        <input class="form-input" type="text" name="l" id="text1" placeholder="1 000 000 рублей">
-        </div>  
-        <div>
-        <label class="form-label" for="text2">Аванс</label>
-        <input class="form-input" type="text" name="l" id="text2" placeholder="10 %">
+            <label class="form-label" for="leasing_field_car_price">Стоимость автомобиля</label>
+            <input class="form-input js__input_for_range" type="text" name="leasing[car_price]" id="leasing_field_car_price" value="1 000 000" maxlength="10" />
+            <span class="rite_placeholder">руб.</span>
         </div>
         <div>
-        <label class="form-label" for="text3">Срок лизинга</label>
-        <input class="form-input" type="text" name="l" id="text3" placeholder="2012 месяц"> 
-        </div>
-    <div class="flex-wrapper">
-        <div>
-        <input class="range mr-right range1" type="range" min="50000" max="25000000" step="50000"> 
-        <span class="output1"> </span> 
+            <label class="form-label" for="leasing_field_prepayment">Аванс</label>
+            <input class="form-input js__input_for_range" type="text" name="leasing[prepayment]" id="leasing_field_prepayment" value="10" maxlength="2" />
+            <span class="rite_placeholder">%</span>
         </div>
         <div>
-        <input class="range mr-right range2" type="range" min="10" max="40" step="10">
+            <label class="form-label" for="leasing_field_period">Срок лизинга</label>
+            <input class="form-input js__input_for_range" type="text" name="leasing[period]" id="leasing_field_period" value="36" maxlength="2" />
+            <span class="rite_placeholder">мес.</span>
+        </div>
+    </div>
+    <div class="flex-wrapper with_range">
+        <div>
+            <input class="range js__range_for_input" type="range" min="50000" max="25000000" step="50000" value="1000000" data-input="leasing_field_car_price" />
+            <span class="range_info">до 25 000 000</span>
+            <span class="range_label">1 000 000</span>
         </div>
         <div>
-        <input class="range range3" type="range" min="12" max="60" step="1">
+            <input class="range js__range_for_input" type="range" min="10" max="40" step="10" value="10" data-input="leasing_field_prepayment" />
+            <span class="range_info">от 10 до 40%</span>
+            <span class="range_label">10</span>
+        </div>
+        <div>
+            <input class="range js__range_for_input" type="range" min="12" max="60" step="1" value="36" data-input="leasing_field_period" >
+            <span class="range_info">от 12 до 60 месяцев</span>
+            <span class="range_label">36</span>
         </div>
     </div>
     <div class="flex-wrapper">
         <div>
-        <label class="form-label" for="text4">Имя<span class="star-text">*</span></label>
-        <input class="form-input" type="text" required name="l" id="text4" placeholder="Ваше имя">
-        </div>  
-        <div> 
-        <label class="form-label" for="text5">Контактный телефон<span class="star-text">*</span></label>
-        <input class="form-input" type="text" required name="l" id="text5" placeholder="+7 (___) ___-__-__">
-        </div>  
-        <div> 
-        <label class="form-label" for="text6">Email</label>
-        <input class="form-input" type="text" name="l" id="text6" placeholder="Ваш email">
-        </div> 
+            <label class="form-label" for="leasing_field_name">Имя<span class="star-text">*</span></label>
+            <input class="form-input" type="text" required="required" name="leasing[name]" id="leasing_field_name" placeholder="Ваше имя">
+        </div>
         <div>
-        <label class="form-label" for="text7">Комментарий</label>
-        <input class="form-input last-form" type="text" name="l" id="text7" placeholder="Ваш комментарий">  
-        </div> 
-    </div> 
-        <button type="submit" class="form-button">Отправить</button>
+            <label class="form-label" for="leasing_field_phone">Контактный телефон<span class="star-text">*</span></label>
+            <input class="form-input" type="text" required="required" name="leasing[phone]" id="leasing_field_phone" placeholder="+7 (___) ___-__-__">
+        </div>
+        <div>
+            <label class="form-label" for="leasing_field_email">Email</label>
+            <input class="form-input" type="text" name="leasing[email]" id="leasing_field_email" placeholder="Ваш email">
+        </div>
+        <div>
+            <label class="form-label" for="leasing_field_comment">Комментарий</label>
+            <input class="form-input last-form" type="text" name="l" id="leasing_field_comment" placeholder="Ваш комментарий">
+        </div>
+    </div>
+    <button type="submit" class="form-button">Отправить</button>
 </section>
 <h1 class="form-header">Калькулятор расчета</h1>
-<section class="form-wrapper">
-        <div class="flex-wrapper">
-            <div>
+<section class="form-wrapper form-calculator">
+    <div class="flex-wrapper">
+        <div>
             <label class="form-label" for="text1">Марка<span class="star-text">*</span></label>
             <input class="form-input" type="text" name="l" id="text1" placeholder="Toyota" required>
-            </div>  
-            <div>
+        </div>
+        <div>
             <label class="form-label" for="text2">Модель<span class="star-text">*</span></label>
             <input class="form-input" type="text" name="l" id="text2" placeholder="RAV4" required>
-            </div>
-            <div>
+        </div>
+        <div>
             <label class="form-label" for="text3">Год<span class="star-text">*</span></label>
-            <input class="form-input" type="text" name="l" id="text3" placeholder="2012" required> 
-            </div>
+            <input class="form-input" type="text" name="l" id="text3" placeholder="2012" required>
+        </div>
         <div class="flex-wrapper">
             <label class="form-label">Пробег<span class="star-text">*</span></label>
             <input class="range range-width" type="range" min="0" max="1500000" step="10000">
         </div>
-        <div class="flex-wrapper">
-            <div>
+    </div>
+    <div class="flex-wrapper">
+        <div>
             <label class="form-label" for="text4">Имя<span class="star-text">*</span></label>
             <input class="form-input" type="text" required name="l" id="text4" placeholder="Ваше имя">
-            </div>  
-            <div> 
+        </div>
+        <div>
             <label class="form-label" for="text5">Контактный телефон<span class="star-text">*</span></label>
             <input class="form-input" type="text" required name="l" id="text5" placeholder="+7 (___) ___-__-__">
-            </div>  
-            <div> 
+        </div>
+        <div>
             <label class="form-label" for="text6">Email</label>
             <input class="form-input" type="text" name="l" id="text6" placeholder="Ваш email">
-            </div> 
-            <div>
+        </div>
+        <div>
             <label class="form-label" for="text7">Комментарий</label>
-            <input class="form-input last-form" type="text" name="l" id="text7" placeholder="Ваш комментарий">  
-            </div> 
-        </div> 
-            <button type="submit" class="form-button">Отправить</button>
-    </section>
+            <input class="form-input last-form" type="text" name="l" id="text7" placeholder="Ваш комментарий">
+        </div>
+    </div>
+    <button type="submit" class="form-button">Отправить</button>
+</section>
 </body>
 </html>
 

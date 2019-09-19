@@ -71,36 +71,19 @@ body{
     border-radius: 4px;
 }
 
-.form-input::-webkit-input-placeholder{
-    font-family: "maneurope-light";
-    font-size: 15px;
-    color: #c3c6ca;
-}
-
-.form-input::-moz-placeholder{
-    font-family: "maneurope-light";
-    font-size: 15px;
-    color: #c3c6ca;
-}
-
-.form-input:-ms-input-placeholder{
-    font-family: "maneurope-light";
-    font-size: 15px;
-    color: #c3c6ca;
-}
-
-.form-input::-ms-input-placeholder{
-    font-family: "maneurope-light";
-    font-size: 15px;
-    color: #c3c6ca;
-}
-
+.form-input::-webkit-input-placeholder,
+.form-input::-moz-placeholder,
+.form-input:-ms-input-placeholder,
+.form-input::-ms-input-placeholder,
 .form-input::placeholder{
     font-family: "maneurope-light";
     font-size: 15px;
     color: #c3c6ca;
 }
 
+.with_range > div{
+    position: relative;
+}
 .range {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -114,8 +97,38 @@ body{
     outline: none;
     position: relative;
 }
+.range_info {
+    display: block;
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+}
+.range_label {
+    font-size: 15px;
+    color: rgb(48, 60, 73);
+    font-weight: bold;
+    line-height: 2.467;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
 
-.range-width{
+.range::-webkit-slider-thumb,
+.range::-moz-range-thumb,
+.range::-ms-thumb {
+    -webkit-appearance: none;
+    width: 13px;
+    height:13px;
+    background:#303c49;
+    border-radius:18px;
+    cursor:pointer;
+    -webkit-transition:.1s;
+    -o-transition:.1s;
+    transition:.1s;
+}
+
+.range-width {
     max-width: 1010px;
     width: 80vw;
     position: relative;
@@ -138,29 +151,6 @@ body{
     bottom: -5px;
 }
 
-.range1::after{
-    content: 'До 25 000 000';
-    margin-top: 8px;
-    display: block;
-    position: absolute;
-    left: 260px;
-}
-
-.range2::after{
-    content: 'От 10 до 40%';
-    margin-top: 8px;
-    display: block;
-    position: absolute;
-    left: 260px;
-}
-
-.range3::after{
-    content: 'От 12 до 16 месяцев';
-    margin-top: 8px;
-    display: block;
-    position: absolute;
-    left: 220px;
-}
 
 .star-text{
     color: #e40045;
@@ -170,33 +160,7 @@ body{
     margin-right: 24px;
 }
 
-.range::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 13px;
-    height:13px;
-    background:#303c49;
-    border-radius:18px;
-    cursor:pointer;
-    -webkit-transition:.1s;
-    -o-transition:.1s;
-    transition:.1s;
-}
 
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-}
-
-.range::-moz-range-thumb {
-    width: 0;
-    height: 0;
-    border: 0;
-}
-   
-.range::-ms-thumb {
-    width: 0;
-    height: 0;
-    border: 0;
-}
 
 .form-button{
     width: 100%;
