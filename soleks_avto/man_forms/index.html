@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Формы</title>
+</head>
+<body>
+        <h1 class="form-header">Запрос на лизинг</h1>
+<section class="form-wrapper">
+    <div class="flex-wrapper">
+        <div>
+        <label class="form-label" for="text1">Стоимость автомобиля</label>
+        <input class="form-input" type="text" name="l" id="text1" placeholder="1 000 000 рублей">
+        </div>  
+        <div>
+        <label class="form-label" for="text2">Аванс</label>
+        <input class="form-input" type="text" name="l" id="text2" placeholder="10 %">
+        </div>
+        <div>
+        <label class="form-label" for="text3">Срок лизинга</label>
+        <input class="form-input" type="text" name="l" id="text3" placeholder="2012 месяц"> 
+        </div>
+    <div class="flex-wrapper">
+        <div>
+        <input class="range mr-right range1" type="range" min="50000" max="25000000" step="50000"> 
+        <span class="output1"> </span> 
+        </div>
+        <div>
+        <input class="range mr-right range2" type="range" min="10" max="40" step="10">
+        </div>
+        <div>
+        <input class="range range3" type="range" min="12" max="60" step="1">
+        </div>
+    </div>
+    <div class="flex-wrapper">
+        <div>
+        <label class="form-label" for="text4">Имя<span class="star-text">*</span></label>
+        <input class="form-input" type="text" required name="l" id="text4" placeholder="Ваше имя">
+        </div>  
+        <div> 
+        <label class="form-label" for="text5">Контактный телефон<span class="star-text">*</span></label>
+        <input class="form-input" type="text" required name="l" id="text5" placeholder="+7 (___) ___-__-__">
+        </div>  
+        <div> 
+        <label class="form-label" for="text6">Email</label>
+        <input class="form-input" type="text" name="l" id="text6" placeholder="Ваш email">
+        </div> 
+        <div>
+        <label class="form-label" for="text7">Комментарий</label>
+        <input class="form-input last-form" type="text" name="l" id="text7" placeholder="Ваш комментарий">  
+        </div> 
+    </div> 
+        <button type="submit" class="form-button">Отправить</button>
+</section>
+<h1 class="form-header">Калькулятор расчета</h1>
+<section class="form-wrapper">
+        <div class="flex-wrapper">
+            <div>
+            <label class="form-label" for="text1">Марка<span class="star-text">*</span></label>
+            <input class="form-input" type="text" name="l" id="text1" placeholder="Toyota" required>
+            </div>  
+            <div>
+            <label class="form-label" for="text2">Модель<span class="star-text">*</span></label>
+            <input class="form-input" type="text" name="l" id="text2" placeholder="RAV4" required>
+            </div>
+            <div>
+            <label class="form-label" for="text3">Год<span class="star-text">*</span></label>
+            <input class="form-input" type="text" name="l" id="text3" placeholder="2012" required> 
+            </div>
+        <div class="flex-wrapper">
+            <label class="form-label">Пробег<span class="star-text">*</span></label>
+            <input class="range range-width" type="range" min="0" max="1500000" step="10000">
+        </div>
+        <div class="flex-wrapper">
+            <div>
+            <label class="form-label" for="text4">Имя<span class="star-text">*</span></label>
+            <input class="form-input" type="text" required name="l" id="text4" placeholder="Ваше имя">
+            </div>  
+            <div> 
+            <label class="form-label" for="text5">Контактный телефон<span class="star-text">*</span></label>
+            <input class="form-input" type="text" required name="l" id="text5" placeholder="+7 (___) ___-__-__">
+            </div>  
+            <div> 
+            <label class="form-label" for="text6">Email</label>
+            <input class="form-input" type="text" name="l" id="text6" placeholder="Ваш email">
+            </div> 
+            <div>
+            <label class="form-label" for="text7">Комментарий</label>
+            <input class="form-input last-form" type="text" name="l" id="text7" placeholder="Ваш комментарий">  
+            </div> 
+        </div> 
+            <button type="submit" class="form-button">Отправить</button>
+    </section>
+</body>
+</html>
+
