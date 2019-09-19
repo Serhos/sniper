@@ -81,9 +81,19 @@ body{
     color: #c3c6ca;
 }
 
-.with_range > div{
+.with_range > div, .with_rite_placeholder > div{
     position: relative;
 }
+.rite_placeholder {
+    font-size: 15px;
+    font-family: "maneurope-light";
+    color: rgb(172, 177, 182);
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 2;
+}
+
 .range {
     -webkit-appearance: none;
     -moz-appearance: none;
