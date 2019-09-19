@@ -114,9 +114,7 @@ body{
     z-index: 3;
 }
 
-.range::-webkit-slider-thumb,
-.range::-moz-range-thumb,
-.range::-ms-thumb {
+.range::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 13px;
     height:13px;
