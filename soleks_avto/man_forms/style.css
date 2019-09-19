@@ -97,6 +97,11 @@ body{
     outline: none;
     position: relative;
 }
+
+.range:focus {
+    outline: none;
+}
+
 .range_info {
     display: block;
     position: absolute;
@@ -122,21 +127,40 @@ body{
 
 }
 
-.range::-webkit-slider-thumb,
-.range::-moz-range-thumb,
-.range::-ms-thumb {
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.range::-ms-track {
+    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+    border-color: transparent;
+    color: transparent;
+}
+
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 13px;
+    height:13px;
+    background:#303c49;
+    border-radius:8px;
+    cursor:pointer;
+}
+.range::-moz-range-thumb {
     width: 13px;
     height:13px;
     background:#303c49;
     border-radius:18px;
     cursor:pointer;
-    -webkit-transition:.1s;
-    -o-transition:.1s;
-    transition:.1s;
 }
-.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
+
+.range::-ms-thumb {
+    width: 13px;
+    height: 13px;
+    background: #303c49;
+    border-radius: 18px;
+    cursor: pointer;
 }
+
 
 .range-width {
     max-width: 1010px;
