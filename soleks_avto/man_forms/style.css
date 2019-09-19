@@ -106,22 +106,20 @@ body{
     display: block;
     position: absolute;
     right: 0px;
-    top:20px;
+    top:53px;
     z-index: 2;
     font-size: 13px;
     font-family: "maneurope-light";
     color: rgb(172, 177, 182);
-    line-height: 2.846;
 }
 .range_label {
     font-family: "maneurope-light";
-    font-size: 15px;
+    font-size: 145px;
     color: rgb(48, 60, 73);
     font-weight: bold;
-    line-height: 2.467;
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 16px;
     z-index: 3;
 
 
