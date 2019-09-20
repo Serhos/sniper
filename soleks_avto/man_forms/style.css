@@ -217,10 +217,11 @@ body{
     color: #fff;
     font-size: 15px;
     cursor: pointer;
+    margin-top: 30px;
 }
 
-.last-form{
+.long-field-form{
     width: 100%;
     max-width: 100%;
-    margin-bottom: 30px;
+    min-width: 100%;
 }
