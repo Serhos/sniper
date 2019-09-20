@@ -16,8 +16,8 @@ window.addEventListener('DOMContentLoaded', function () {
         return s;
     }
 
-    let range_input = document.querySelectorAll('.js__input_for_range');
-    range_input.forEach(function(el) {
+    let range_inputs = document.querySelectorAll('.js__input_for_range');
+    range_inputs.forEach(function(el) {
         el.onchange = function (e) {
             let inp_val = parseInt(el.value.replace(/[^\d]+/g, ''));
             let range_block = document.querySelector('[data-input="' + el.id + '"]');
@@ -40,4 +40,18 @@ window.addEventListener('DOMContentLoaded', function () {
             document.getElementById(el.id + '_label').innerHTML = formated_val;
         };
     });
+
+    let range_blocks = document.querySelectorAll('.js__range_for_input');
+    range_blocks.forEach(function(el) {
+        el.onchange = function (e) {
+            let inp_val = parseInt(el.value);
+            let input_block = document.getElementById(el.getAttribute('data-input'));
+            let formated_val = make_format_number(inp_val);
+            input_block.value = formated_val;
+            document.getElementById(input_block.id + '_label').innerHTML = formated_val;
+        };
+    });
+
+
+
 });
