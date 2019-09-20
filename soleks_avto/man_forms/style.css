@@ -81,7 +81,7 @@ body{
     color: #c3c6ca;
 }
 
-.with_range > div, .with_rite_placeholder > div{
+.with_range div{
     position: relative;
 }
 .rite_placeholder {
