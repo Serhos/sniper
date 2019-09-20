@@ -177,31 +177,6 @@ body{
     cursor: pointer;
 }
 
-
-/*.range-width {
-    max-width: 1010px;
-    width: 80vw;
-    position: relative;
-}
-
-.range-width::before{
-    content: '0';
-    position: absolute;
-    display: block;
-    left: -10px;
-    bottom: -6px;
-}
-
-.range-width::after{
-    content: '1 500 000';
-    position: absolute;
-    display: block;
-    left: 100%;
-    white-space: nowrap;
-    bottom: -5px;
-}*/
-
-
 .star-text{
     color: #e40045;
 }
@@ -242,6 +217,8 @@ body{
 }
 .long-field-with-range .flex-wrapper {
     width: calc(100% - 52px);
+    max-width: calc(100% - 52px);
+    min-width: calc(100% - 52px);
 }
 
 .long-field-with-range .flex-wrapper .range {
@@ -251,6 +228,13 @@ body{
     margin: 15px 0;
 }
 
+.range_min_info, .range_max_info {
+    font-size: 15px;
+    font-family: "maneurope-light";
+    color: rgb(48, 60, 73);
+}
+
+
 @media screen and (max-width: 768px){
     .flex-wrapper > div,  .long-field{
         width:50%;
@@ -258,10 +242,15 @@ body{
         min-width: 50%;
     }
 
-    .long-field-with-range{
-        width: 100%;
-        max-width: 100%;
-        min-width: 100%;
+    /*.long-field-with-range, .long-field-with-range{
+        width: 100%!important;
+        max-width: 100%!important;
+        min-width: 100%!important;
+    }*/
+    .long-field-with-range .flex-wrapper{
+        width: calc(100% - 52px)!important;;
+        max-width: calc(100% - 52px)!important;;
+        min-width: calc(100% - 52px)!important;;
     }
 
 }
