@@ -3,14 +3,16 @@
     src: url("fonts/Manglobalpro.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-   }
+    font-display: swap;
+}
 
 @font-face {
     font-family: "maneurope-light";
     src: url("fonts/maneurope-light.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-   }
+    font-display: swap;
+}
 
 *{
     margin: 0;
@@ -30,7 +32,6 @@ body{
     max-width: 1140px;
     padding: 0;
     margin: 30px auto;
-    box-sizing: border-box;
 }
 
 .form-wrapper{
@@ -40,7 +41,6 @@ body{
     background-color: #f0f1f2;
     margin: 0 0;
     padding: 30px 15px 15px 15px;
-    box-sizing: border-box;
 }
 
 .form-header{
@@ -55,6 +55,7 @@ body{
 
 
 .flex-wrapper{
+    display: -ms-flex;
     display: -webkit-flex;
     display: flex;
     -ms-flex-wrap: wrap;
