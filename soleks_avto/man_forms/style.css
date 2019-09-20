@@ -242,11 +242,12 @@ body{
         min-width: 50%;
     }
 
-    /*.long-field-with-range, .long-field-with-range{
+    .long-field-with-range, .long-field-with-range{
         width: 100%!important;
         max-width: 100%!important;
         min-width: 100%!important;
-    }*/
+    }
+
     .long-field-with-range .flex-wrapper{
         width: calc(100% - 52px)!important;;
         max-width: calc(100% - 52px)!important;;
