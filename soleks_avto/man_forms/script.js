@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function () {
             range_block.value = '' + new_inp_val;
             document.getElementById(el.id + '_label').innerHTML = formated_val;
         };
-    };
+    }
 
     var range_blocks = document.querySelectorAll('.js__range_for_input');
     for (var k1 in range_blocks) {
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
             input_block.value = formated_val;
             document.getElementById(input_block.id + '_label').innerHTML = formated_val;
         };
-    });
+    }
 
 
 
