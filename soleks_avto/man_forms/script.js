@@ -17,7 +17,8 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     var range_inputs = document.querySelectorAll('.js__input_for_range');
-    range_inputs.forEach(function(el) {
+    for (var k in range_inputs) {
+        var el = range_inputs[k];
         el.onchange = function (e) {
             var inp_val = parseInt(el.value.replace(/[^\d]+/g, ''));
             var range_block = document.querySelector('[data-input="' + el.id + '"]');
@@ -39,13 +40,14 @@ window.addEventListener('DOMContentLoaded', function () {
             range_block.value = '' + new_inp_val;
             document.getElementById(el.id + '_label').innerHTML = formated_val;
         };
-    });
+    };
 
     var range_blocks = document.querySelectorAll('.js__range_for_input');
-    range_blocks.forEach(function(el) {
-        el.oninput = function (e) {
-            var inp_val = parseInt(el.value);
-            var input_block = document.getElementById(el.getAttribute('data-input'));
+    for (var k1 in range_blocks) {
+        var el1=range_blocks[k1];
+        el1.oninput = function (e) {
+            var inp_val = parseInt(el1.value);
+            var input_block = document.getElementById(el1.getAttribute('data-input'));
             var formated_val = make_format_number(inp_val);
             input_block.value = formated_val;
             document.getElementById(input_block.id + '_label').innerHTML = formated_val;
