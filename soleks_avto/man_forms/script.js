@@ -7,10 +7,10 @@ window.addEventListener('DOMContentLoaded', function () {
         if (l > 3) {
             let f_s = '';
             while (l > 3) {
-                f_s = s.substr(l-3, 3) + '' + f_s;
+                f_s = s.substr(l-3, 3) + ' ' + f_s;
                 l = l-3;
             }
-            f_s = s.substr(0, l) + '' + f_s;
+            f_s = s.substr(0, l) + ' ' + f_s;
             return f_s;
         }
         return s;
