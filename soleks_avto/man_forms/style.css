@@ -236,13 +236,19 @@ body{
     -ms-flex-wrap: nowrap;
     -webkit-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 .long-field-with-range .flex-wrapper {
     width: calc(100% - 52px);
 }
 
 .long-field-with-range .flex-wrapper .range {
-    width: calc(100% - 70px);
+    width: calc(100% - 80px);
+}
+.long-field-with-range .form-label{
+    margin: 15px 0;
 }
 
 @media screen and (max-width: 768px){
