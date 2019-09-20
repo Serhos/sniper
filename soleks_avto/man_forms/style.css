@@ -52,6 +52,13 @@ body{
             justify-content: space-between;
 }
 
+.flex-wrapper > div {
+    width:33%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin:0;
+}
+
 .form-label{
     display: block;
     color: #303c49;
@@ -63,12 +70,15 @@ body{
 }
 
 .form-input{
-    width: 354px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     height: 40px;
     border: 1px solid #d6d8db;
-    padding-top: 5px;
-    padding-left: 15px;
+    padding: 5px 10px;
     border-radius: 4px;
+    font-family: "maneurope-light";
+    font-size: 15px;
 }
 
 .form-input::-webkit-input-placeholder,
@@ -102,8 +112,8 @@ body{
     border: 1px solid #d6d8db;
     height: 5px;
     vertical-align: bottom;
-    width: 354px;
-    margin: 40px 0 40px 0;
+    width: 100%;
+    margin: 40px 0;
     outline: none;
     position: relative;
 }
@@ -131,8 +141,6 @@ body{
     left: 0px;
     top: 16px;
     z-index: 3;
-
-
 }
 
 .range::-webkit-slider-thumb {
@@ -170,7 +178,7 @@ body{
 }
 
 
-.range-width {
+/*.range-width {
     max-width: 1010px;
     width: 80vw;
     position: relative;
@@ -191,17 +199,12 @@ body{
     left: 100%;
     white-space: nowrap;
     bottom: -5px;
-}
+}*/
 
 
 .star-text{
     color: #e40045;
 }
-
-.mr-right{
-    margin-right: 24px;
-}
-
 
 
 .form-button{
@@ -217,29 +220,7 @@ body{
 }
 
 .last-form{
-    width: 90vw;
-    max-width: 1111px;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 30px;
-}
-
-@media (max-width: 1100px){
-    .form-input,
-    .range{
-        width: 320px;
-    }
-}
-
-@media (max-width: 400px){
-    .form-input,
-    .range{
-        width: 302px;
-    }
-    .range-width{
-        width: 200px;
-    }
-    .flex-wrapper{
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
 }
