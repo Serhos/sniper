@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let range_blocks = document.querySelectorAll('.js__range_for_input');
     range_blocks.forEach(function(el) {
-        el.onchange = function (e) {
+        el.oninput = function (e) {
             let inp_val = parseInt(el.value);
             let input_block = document.getElementById(el.getAttribute('data-input'));
             let formated_val = make_format_number(inp_val);
