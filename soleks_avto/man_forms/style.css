@@ -55,8 +55,8 @@ body{
 
 
 .flex-wrapper{
-    display: -ms-flex;
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
