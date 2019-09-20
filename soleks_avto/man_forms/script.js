@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
     'use strict';
 
     function make_format_number (n){
-        let s = '' . n;
+        let s = '' + n;
         let l = s.length;
         if (l > 3) {
             let f_s = '';
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function () {
     let range_input = document.querySelectorAll('.js__input_for_range');
     range_input.forEach(function(el) {
         el.onchange = function (e) {
-            let inp_val = parseInt(el.value.replace('/[^\d]+/', ''));
+            let inp_val = parseInt(el.value.replace(/[^\d]+/g, ''));
             let range_block = document.querySelector('[data-input="' + el.id + '"]');
             let min = parseInt(range_block.getAttribute('min'));
             let new_inp_val = min;
