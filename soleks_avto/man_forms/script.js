@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function () {
             let formated_val = make_format_number(new_inp_val);
             el.value = formated_val;
             range_block.value = '' + new_inp_val;
-            range_block.nextSibling.innerHTML = formated_val;
+            document.getElementById(el.id + '_label').innerHTML = formated_val;
         };
     });
 });
