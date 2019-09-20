@@ -79,22 +79,22 @@
 <form class="form-wrapper form-calculator">
     <div class="flex-wrapper with_range">
         <div>
-            <label class="form-label" for="text1">Марка<span class="star-text">*</span></label>
-            <input class="form-input" type="text" name="l" id="text1" placeholder="Toyota" required>
+            <label class="form-label" for="calc_field_mark">Марка<span class="star-text">*</span></label>
+            <input class="form-input" type="text" name="calc_field[mark]" id="calc_field_mark" placeholder="Toyota" required>
         </div>
         <div>
-            <label class="form-label" for="text2">Модель<span class="star-text">*</span></label>
-            <input class="form-input" type="text" name="l" id="text2" placeholder="RAV4" required>
+            <label class="form-label" for="calc_field_model">Модель<span class="star-text">*</span></label>
+            <input class="form-input" type="text" name="calc_field[model]" id="calc_field_model" placeholder="RAV4" required>
         </div>
         <div>
-            <label class="form-label" for="text3">Год<span class="star-text">*</span></label>
-            <input class="form-input" type="text" name="l" id="text3" placeholder="2012" required>
+            <label class="form-label" for="calc_field_year">Год<span class="star-text">*</span></label>
+            <input class="form-input" type="text" name="calc_field[year]" id="calc_field_year" placeholder="2012" required>
         </div>
         <div class="flex-wrapper long-field-with-range">
             <label class="form-label">Пробег<span class="star-text">*</span></label>
             <div class="flex-wrapper">
                 <span class="range_min_info">0</span>
-                <input class="range" type="range" min="0" max="1500000" step="10000" value="750000">
+                <input class="range" type="range" min="0" max="1500000" step="10000" value="750000" name="calc_field[mileage]">
                 <span class="range_max_info">1 500 000</span>
                 <span class="range_label">750 000</span>
             </div>
@@ -102,20 +102,20 @@
     </div>
     <div class="flex-wrapper">
         <div>
-            <label class="form-label" for="text4">Имя<span class="star-text">*</span></label>
-            <input class="form-input" type="text" required name="l" id="text4" placeholder="Ваше имя">
+            <label class="form-label" for="calc_field_name">Имя<span class="star-text">*</span></label>
+            <input class="form-input" type="text" required name="calc_field[name]" id="calc_field_name" placeholder="Ваше имя">
         </div>
         <div>
-            <label class="form-label" for="text5">Контактный телефон<span class="star-text">*</span></label>
-            <input class="form-input" type="text" required name="l" id="text5" placeholder="+7 (___) ___-__-__">
+            <label class="form-label" for="calc_field_phone">Контактный телефон<span class="star-text">*</span></label>
+            <input class="form-input" type="text" required name="calc_field[phone]" id="calc_field_phone" placeholder="+7 (___) ___-__-__">
         </div>
         <div>
-            <label class="form-label" for="text6">Email</label>
-            <input class="form-input" type="text" name="l" id="text6" placeholder="Ваш email">
+            <label class="form-label" for="calc_field_email">Email</label>
+            <input class="form-input" type="text" name="calc_field[email]" id="calc_field_email" placeholder="Ваш email">
         </div>
         <div class="long-field">
-            <label class="form-label" for="text7">Комментарий</label>
-            <input class="form-input" type="text" name="l" id="text7" placeholder="Ваш комментарий">
+            <label class="form-label" for="calc_field_comment">Комментарий</label>
+            <input class="form-input" type="text" name="calc_field[comment]" id="calc_field_comment" placeholder="Ваш комментарий">
         </div>
     </div>
     <button type="submit" class="form-button">Отправить</button>
