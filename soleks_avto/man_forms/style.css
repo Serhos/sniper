@@ -42,14 +42,14 @@ body{
 }
 
 .flex-wrapper{
-    display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .flex-wrapper > div {
@@ -226,9 +226,36 @@ body{
     min-width: 100%;
 }
 
+.long-field-with-range{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.long-field-with-range, .long-field-with-range .flex-wrapper{
+    -ms-flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.long-field-with-range .flex-wrapper {
+    width: calc(100% - 52px);
+}
+
+.long-field-with-range .flex-wrapper .range {
+    width: calc(100% - 70px);
+}
+
 @media screen and (max-width: 768px){
     .flex-wrapper > div,  .long-field{
         width:50%;
+        max-width: 50%;
+        min-width: 50%;
+    }
+
+    .long-field-with-range{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
 
 }
@@ -236,6 +263,8 @@ body{
 @media screen and (max-width: 500px){
     .flex-wrapper > div,  .long-field{
         width:100%;
+        max-width: 100%;
+        min-width: 100%;
     }
 
 }

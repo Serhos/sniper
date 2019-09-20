@@ -71,7 +71,7 @@
 </section>
 <h1 class="form-header">Калькулятор расчета</h1>
 <section class="form-wrapper form-calculator">
-    <div class="flex-wrapper">
+    <div class="flex-wrapper with_range">
         <div>
             <label class="form-label" for="text1">Марка<span class="star-text">*</span></label>
             <input class="form-input" type="text" name="l" id="text1" placeholder="Toyota" required>
@@ -84,9 +84,14 @@
             <label class="form-label" for="text3">Год<span class="star-text">*</span></label>
             <input class="form-input" type="text" name="l" id="text3" placeholder="2012" required>
         </div>
-        <div class="flex-wrapper">
+        <div class="flex-wrapper long-field-with-range">
             <label class="form-label">Пробег<span class="star-text">*</span></label>
-            <input class="range range-width" type="range" min="0" max="1500000" step="10000">
+            <div class="flex-wrapper">
+                <span class="range_min_info">0</span>
+                <input class="range" type="range" min="0" max="1500000" step="10000" value="750000">
+                <span class="range_max_info">1 500 000</span>
+                <span class="range_label">750 000</span>
+            </div>
         </div>
     </div>
     <div class="flex-wrapper">
