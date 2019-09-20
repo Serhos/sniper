@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function () {
             let new_inp_val = min;
             let max = parseInt(range_block.getAttribute('max'));
             let step = parseInt(range_block.getAttribute('step'));
-            if (!isNaN(inp_val) || inp_val < min) {
+            if (isNaN(inp_val) || inp_val < min) {
                 new_inp_val = min;
             } else if (inp_val > max) {
                 new_inp_val = max;
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function () {
             let formated_val = make_format_number(new_inp_val);
             el.value = formated_val;
             range_block.value = '' + new_inp_val;
-            range_block.nextNode().innerHTML = formated_val;
+            range_block.nextSibling.innerHTML = formated_val;
         };
     });
 });
