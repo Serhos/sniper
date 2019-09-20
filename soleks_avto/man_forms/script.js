@@ -41,12 +41,12 @@ window.addEventListener('DOMContentLoaded', function () {
         };
     });
 
-    let range_blocks = document.querySelectorAll('.js__range_for_input');
+    var range_blocks = document.querySelectorAll('.js__range_for_input');
     range_blocks.forEach(function(el) {
         el.oninput = function (e) {
-            let inp_val = parseInt(el.value);
-            let input_block = document.getElementById(el.getAttribute('data-input'));
-            let formated_val = make_format_number(inp_val);
+            var inp_val = parseInt(el.value);
+            var input_block = document.getElementById(el.getAttribute('data-input'));
+            var formated_val = make_format_number(inp_val);
             input_block.value = formated_val;
             document.getElementById(input_block.id + '_label').innerHTML = formated_val;
         };
