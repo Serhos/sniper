@@ -67,6 +67,8 @@ body{
 
 .flex-wrapper > div {
     width:33.33%;
+    max-width:33.33%;
+    min-width:33.33%;
     box-sizing: border-box;
     padding: 0 10px;
     margin:0;
@@ -215,9 +217,10 @@ body{
 }
 
 .long-field-with-range{
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    width: 100%!important;
+    max-width: 100%!important;
+    min-width: 100%!important;
+    margin-top: 20px!important;
 }
 
 .long-field-with-range, .long-field-with-range .flex-wrapper{
