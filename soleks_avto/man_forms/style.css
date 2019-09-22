@@ -237,6 +237,8 @@ body{
     width: calc(100% - 52px);
     max-width: calc(100% - 52px);
     min-width: calc(100% - 52px);
+    padding: 0!important;
+    margin-left: 10px;
 }
 
 .long-field-with-range .form-label{
