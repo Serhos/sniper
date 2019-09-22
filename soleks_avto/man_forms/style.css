@@ -157,6 +157,7 @@ body{
     left: 0px;
     top: 16px;
     z-index: 3;
+    white-space: nowrap;
 }
 
 .range::-webkit-slider-thumb {
