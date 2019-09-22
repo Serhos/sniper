@@ -239,9 +239,6 @@ body{
     min-width: calc(100% - 52px);
 }
 
-.long-field-with-range .flex-wrapper .range {
-    width: calc(100% - 80px);
-}
 .long-field-with-range .form-label{
     margin: 15px 0;
 }
