@@ -24,12 +24,19 @@ window.addEventListener('DOMContentLoaded', function () {
         let max = parseInt(range_block.getAttribute('max'));
         let val = parseInt(range_block.value);
         let width = range_block.offsetWidth;
+        let max_pos = width - label_width;
         let pos = ((width/(max-min))*(val-min)) - (label_width/2);
+        if (pos < 0) {
+            pos = 0;
+        } else if (pos > max_pos) {
+            pos = max_pos;
+        }
         label_block.style.left = pos + 'px';
     };
 
     let range_inputs = document.querySelectorAll('.js__input_for_range');
     range_inputs.forEach(function(el) {
+        range_label_set_place(el.id);
         el.onchange = function (e) {
             let inp_val = parseInt(el.value.replace(/[^\d]+/g, ''));
             let range_block = document.querySelector('[data-input="' + el.id + '"]');
@@ -50,6 +57,7 @@ window.addEventListener('DOMContentLoaded', function () {
             el.value = formated_val;
             range_block.value = '' + new_inp_val;
             document.getElementById(el.id + '_label').innerHTML = formated_val;
+            range_label_set_place(el.id);
         };
     });
 
@@ -61,6 +69,7 @@ window.addEventListener('DOMContentLoaded', function () {
             let formated_val = make_format_number(inp_val);
             input_block.value = formated_val;
             document.getElementById(input_block.id + '_label').innerHTML = formated_val;
+            range_label_set_place(input_block.id);
         };
     });
 
