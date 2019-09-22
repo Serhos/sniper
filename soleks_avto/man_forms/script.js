@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
         return s;
     }
 
-    function range_label_set_place(inp_id) {
+    window.range_label_set_place = function (inp_id) {
         let range_block = document.querySelector('[data-input="' + inp_id + '"]');
         let label_block = document.getElementById(inp_id + '_label');
         let label_width = label_block.offsetWidth;
@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
         let width = range_block.offsetWidth;
         let pos = ((width/(max-min))*(val-min)) - (label_width/2);
         label_block.style.left = pos + 'px';
-    }
+    };
 
     let range_inputs = document.querySelectorAll('.js__input_for_range');
     range_inputs.forEach(function(el) {
